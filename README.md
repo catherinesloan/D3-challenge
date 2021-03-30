@@ -9,3 +9,5 @@ Graph changes successfully when I change x-axis but labels are no longer moving 
 To see part 1 of assignment - uncomment out  '<script type="text/javascript" src="assets/js/app.js"></script>' in html file
 and comment out bonus source
 
+Need to tidy up comments for both parts.
+
