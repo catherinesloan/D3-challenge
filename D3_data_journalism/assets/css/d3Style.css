@@ -31,8 +31,8 @@
 }
 
 .stateCircle {
-  fill: #89bdd3;
-  stroke: #e3e3e3;
+  fill: #d65bd6;
+  stroke: #faf8f9;
 }
 
 .chart {
@@ -41,15 +41,15 @@
 }
 
 .d3-tip {
-  padding: 6px;
-  font-size: 12px;
+  padding: 2px; 
+  font-size: 10px;
   line-height: 1;
   line-height: 1.5em;
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+  background: rgba(56, 55, 55, 0.8);
+  border-radius: 8px;
 }
 
 /* Mobile Rules */
