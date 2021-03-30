@@ -1,29 +1,39 @@
+function makeResponsive() {
+
+  // if the SVG area isn't empty when the browser loads,
+  // remove it and replace it with a resized version of the chart
+  var svgArea = d3.select("body").select("svg");
+
+  if (!svgArea.empty()) {
+    svgArea.remove();
+  }
+
 // 1: SET UP CHART
-var svgWidth = 960;
-var svgHeight = 500;
+  var svgHeight = window.innerHeight;
+  var svgWidth = window.innerWidth;
 
-var margin = {
-  top: 20,
-  right: 40,
-  bottom: 60,
-  left: 100
-};
+  var margin = {
+    top: 20,
+    right: 40,
+    bottom: 60,
+    left: 100
+  };
 
-var chartWidth = svgWidth - margin.left - margin.right;
-var chartHeight = svgHeight - margin.top - margin.bottom;
+  var chartHeight = svgHeight - margin.top - margin.bottom;
+  var chartWidth = svgWidth - margin.left - margin.right;
 
 // 2: CREATE AN SVG WRAPPER
 // Append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select("#scatter") // html file has id of scatter
-  .append("svg")
-  .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  var svg = d3.select("#scatter") // html file has id of scatter
+    .append("svg")
+    .attr("width", svgWidth)
+    .attr("height", svgHeight);
 
-var chartGroup = svg.append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+  var chartGroup = svg.append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // 3: IMPORT DATA, data is read in as string
-d3.csv("/assets/data/data.csv").then(function(censusData) {
+  d3.csv("/assets/data/data.csv").then(function(censusData) {
     // console.log(censusData); // to check data has been read in
 
     // Convert data to numerical values
@@ -132,6 +142,15 @@ d3.csv("/assets/data/data.csv").then(function(censusData) {
       .text("In Poverty (%)");
   }).catch(function(error) {
     console.log(error);
+  
+  }); // end of reading in data
 
-}); // end of reading in data
+}
+
+// ** remember this 
+makeResponsive();
+
+// Event listener for window resize.
+// When the browser window is resized, makeResponsive() is called.
+d3.select(window).on("resize", makeResponsive);
 
