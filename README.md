@@ -11,14 +11,14 @@
 4. To see part 1 of project - uncomment out  '<script type="text/javascript" src="assets/js/app.js"></script>' in html file
 **and** comment out bonus source
 
-## Background: 
+### Background: 
 As a data analyst for a major metro paper, tasked with analysing the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand my findings.
 
-## Task: 
+### Task: 
 To sniff out the first story idea by sifting through information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System.
 The data set included with the assignment is based on [2014 ACS 1-year estimates.](https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml)
 
-## Output: 
+### Output: 
 **Part 1:**
 Created [app.js](https://github.com/catherinesloan/D3-challenge/blob/main/D3_data_journalism/assets/js/app.js) using D3 techniques:
 1. Pulled in the [data](https://github.com/catherinesloan/D3-challenge/blob/main/D3_data_journalism/assets/data/data.csv) by using the d3.csv function
